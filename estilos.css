@@ -1,0 +1,79 @@
+/* Definir variables para los colores y la fuente */
+:root {
+    --color-fondo: #f4f4f4;
+    --color-principal: #4CAF50;
+    --color-secundario: #45a049;
+    --color-error: #ff4d4d;
+    --color-texto: #333;
+    --color-fondo-formulario: #fff;
+    --color-borde: #ccc;
+    --fuente-primaria: 'Arial', sans-serif;
+    --fuente-secundaria: 'Verdana', sans-serif;
+}
+
+/* Estilos generales */
+body {
+    font-family: var(--fuente-primaria);
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor del formulario */
+.login-container {
+    width: 350px; /* Aumenté el ancho del contenedor */
+    margin: 100px auto;
+    padding: 20px;
+    background-color: var(--color-fondo-formulario);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    border: 2px solid var(--color-borde); /* Añadí un borde de 2px */
+}
+
+/* Títulos */
+h2 {
+    text-align: center;
+    color: var(--color-texto);
+    font-family: var(--fuente-secundaria);
+}
+
+/* Estilos de los campos del formulario */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    font-family: var(--fuente-primaria);
+    font-size: 14px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+/* Estilos del botón */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--fuente-primaria);
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: var(--color-secundario);
+}
+
+/* Estilo del mensaje de error */
+.error {
+    color: var(--color-error);
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+

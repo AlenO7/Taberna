@@ -1,0 +1,183 @@
+:root {
+    --color-fondo: #f4f4f4;
+    --color-principal: #4CAF50;
+    --color-secundario: #272827;
+    --color-texto: #333;
+    --color-boton: #4CAF50;
+    --color-boton-hover: #45a049;
+    --color-borde: #ccc;
+    --fuente-primaria: 'Arial', sans-serif;
+}
+
+/* Estilos generales para la página de productos */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Filtros de marcas */
+.filters {
+    width: 200px;
+    padding: 20px;
+    background-color: #fff;
+    border-right: 2px solid #ddd;
+}
+
+.filters h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.filters ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filters ul li {
+    margin: 10px 0;
+}
+
+.filters ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.filters ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Productos */
+.productos {
+    flex: 1;
+    padding: 20px;
+}
+
+.productos h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.productos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.producto {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.producto h3 {
+    font-size: 20px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.producto span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+/* Barra de navegación */
+.navbar {
+    background-color: var(--color-principal);
+    padding: 10px;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+}
+
+.nav-item a:hover {
+    background-color: var(--color-secundario);
+}
+
+/* Desplegables */
+.nav-item:hover .dropdown {
+    display: block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-principal);
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Asegura que el desplegable esté sobre otros elementos */
+}
+
+.dropdown li {
+    padding: 10px;
+}
+
+.dropdown li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background-color: var(--color-secundario);
+}
+
+/* Añadir un pequeño borde para los elementos dentro del dropdown */
+.dropdown li {
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.dropdown li:last-child {
+    border-bottom: none;
+}

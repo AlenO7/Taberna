@@ -1,0 +1,120 @@
+/* Definir variables para colores y fuentes */
+:root {
+    --color-fondo: #f4f4f4;
+    --color-principal: #4CAF50;
+    --color-secundario: #45a049;
+    --color-texto: #333;
+    --color-boton: #4CAF50;
+    --color-boton-hover: #45a049;
+    --color-borde: #ccc;
+    --fuente-primaria: 'Arial', sans-serif;
+}
+
+/* Estilos generales */
+body {
+    font-family: var(--fuente-primaria);
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: var(--color-principal);
+    padding: 10px;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+}
+
+.nav-item a:hover {
+    background-color: var(--color-secundario);
+}
+
+/* Desplegables */
+.nav-item:hover .dropdown {
+    display: block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-principal);
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Asegura que el desplegable esté sobre otros elementos */
+}
+
+.dropdown li {
+    padding: 10px;
+}
+
+.dropdown li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background-color: var(--color-secundario);
+}
+
+/* Añadir un pequeño borde para los elementos dentro del dropdown */
+.dropdown li {
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.dropdown li:last-child {
+    border-bottom: none;
+}
+
+/* Estilos del contenido principal */
+.main-content {
+    padding: 40px;
+    text-align: center;
+}
+
+.main-content h1 {
+    color: var(--color-texto);
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: var(--color-boton);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.btn:hover {
+    background-color: var(--color-boton-hover);
+}
+
